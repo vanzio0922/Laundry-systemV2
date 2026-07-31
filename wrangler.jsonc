@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+  "name": "laundry-bot",
+  "main": "worker.js",
+  "compatibility_date": "2025-01-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+  "vars": {
+    "CLOUDINARY_URL": "https://api.cloudinary.com/v1_1/your_cloud_name/image/upload",
+    "TWILIO_ACCOUNT_SID": "your_account_sid",
+    "TWILIO_AUTH_TOKEN": "your_auth_token",
+    "TWILIO_WHATSAPP_NUMBER": "+14155238886",
+    "JWT_SECRET": "your-secret-key"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "laundry-db",
+      "database_id": "your_database_id"
+    }
+  ]
+}
